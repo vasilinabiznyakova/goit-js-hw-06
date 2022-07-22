@@ -8,15 +8,19 @@ const refs = {
     incrementBtn: document.querySelector('[data-action="increment"]'),
 };
 
+let count = 0;
 
 refs.decrementBtn.addEventListener('click', onDecrementBtn);
 refs.incrementBtn.addEventListener('click', onIncrementBtn);
 
 
 function onDecrementBtn() {
-    refs.counter.textContent = Number(refs.counter.textContent) - 1; 
+
+    count -= 1;
+    refs.counter.textContent = count; 
 }
 
 function onIncrementBtn() {
-    refs.counter.textContent = Number(refs.counter.textContent) + 1; 
+    count += 1;
+    refs.counter.textContent = count; 
 }
